@@ -1,0 +1,34 @@
+.profile {
+	ul {
+		list-style-type: none;
+		background-color: #ddd;
+		color: #333;
+		padding: 0.2rem;
+		border-radius: 7px;
+		position: absolute;
+		right: 1rem;
+		z-index: 1;
+
+		li {
+			display: flex;
+			align-items: center;
+			gap: 5px;
+			padding: 9px;
+			cursor: pointer;
+			border-radius: 7px;
+
+			img {
+				height: 24px;
+			}
+		}
+
+		li:hover {
+			background-color: rgb(205, 236, 243);
+			color: #333;
+		}
+	}
+}
+
+.profile-icon {
+	font-size: 2rem;
+}

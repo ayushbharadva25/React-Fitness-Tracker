@@ -1,0 +1,98 @@
+// Theme variables:
+$teal: #008170;
+$light-teal: #00b69e;
+$mid-teal: #00b69e;
+
+#activity-form-section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 1.5rem;
+	padding: 1rem;
+	width: 100%;
+
+	.form-heading {
+		margin-bottom: 0.75rem;
+		color: #358a7e;
+	}
+
+	form {
+		border-radius: 16px;
+		padding: 1rem;
+		background-color: #31626e;
+		min-width: 340px;
+
+		h2 {
+			margin: 0.5rem 0 2.5rem 0;
+			color: $light-teal;
+		}
+
+		.field {
+			text-align: left;
+			margin-bottom: 0.75rem;
+			label {
+				padding: 0 0.5rem;
+				font-weight: bold;
+				color: #fff;
+				margin-bottom: 4px;
+			}
+		}
+
+		input,
+		select {
+			display: block;
+			width: 100%;
+			font-size: 1.2rem;
+			outline: none;
+			border: none;
+			border-radius: 5px;
+			padding: 0.5rem 1rem;
+			margin-top: 5px;
+		}
+
+		button {
+			padding: 0.4rem 0.8rem;
+			font-size: 1rem;
+			background-color: $teal;
+			color: white;
+			border: none;
+			border-radius: 7px;
+			transition: all 0.2s ease;
+		}
+
+		button:hover {
+			background-color: #0bd7bc;
+		}
+	}
+
+	.activity-submit-btn {
+		padding: 0.5rem 1rem;
+		margin-top: 0.5rem;
+		font-size: 1rem;
+		width: 100%;
+		border-radius: 7px;
+		outline: none;
+		border: none;
+		background-color: $mid-teal;
+		color: #fff;
+		transition: all 0.2s ease;
+	}
+	.activity-submit-btn:hover {
+		background-color: #4bd1bf;
+		cursor: pointer;
+	}
+}
+
+.activity-error-text {
+	color: #ff8253;
+	margin: 0.25rem;
+}
+
+@media screen and (max-width: 360px) {
+	#activity-form-section {
+		form {
+			min-width: 300px;
+		}
+	}
+}

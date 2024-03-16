@@ -1,0 +1,118 @@
+// color variables:
+$teal: #008170;
+$heading-color: #112a46;
+$text-color: rgb(9, 57, 110);
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+.auth-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	width: 100vw;
+	background: linear-gradient(
+			45deg,
+			hsla(234, 36%, 55%, 1) 0%,
+			hsla(234, 36%, 55%, 0) 100%
+		),
+		url("../../assets/images/BgGraphics.png") top right/auto 100% no-repeat;
+
+	.auth-form-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		flex: 1 0;
+		object-fit: cover;
+		padding: 1rem;
+		height: 100%;
+		width: 100%;
+		h1 {
+			font-size: 2.2rem;
+			padding: 2rem 0;
+			color: $heading-color;
+			text-shadow: 1px 1px 3px #4242af;
+		}
+
+		.auth-form {
+			min-width: 310px;
+			label {
+				margin: 0.5rem 0;
+				color: #112a46;
+				font-weight: bold;
+			}
+
+			input {
+				display: block;
+				margin: 0.5rem 0;
+				font-size: 1.5rem;
+				width: 100%;
+				padding: 0.5rem;
+				border: none;
+				border-radius: 7px;
+				outline: none;
+				background-color: #eee;
+			}
+
+			.pass-field,
+			.conf-pass-field {
+				background-color: #eee;
+				display: flex;
+				border-radius: 7px;
+				align-items: center;
+				margin: 0.5rem 0;
+				padding: 0 0.5rem;
+
+				input {
+					margin: 0;
+				}
+			}
+
+			.auth-submit-btn {
+				padding: 0.5rem 1rem;
+				margin-top: 1rem;
+				font-size: 1rem;
+				background-color: $teal;
+				color: white;
+				width: 100%;
+				border: none;
+				border-radius: 7px;
+				cursor: pointer;
+			}
+		}
+
+		p {
+			color: $text-color;
+			padding: 1rem 0;
+			text-align: center;
+			font-size: 18px;
+			span {
+				font-weight: bold;
+				cursor: pointer;
+				text-decoration: underline;
+			}
+		}
+	}
+
+	.auth-poster {
+		flex: 1 0 50%;
+		height: 100%;
+		img {
+			border-radius: 7px;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+}
+
+.error-message {
+	color: rgb(219, 19, 19);
+	font-size: 0.9rem;
+	margin-bottom: 0.55rem;
+}

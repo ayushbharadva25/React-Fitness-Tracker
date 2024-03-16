@@ -1,0 +1,51 @@
+// Theme variables:
+$black: #0f0f0f;
+$dark-blue: #232d3f;
+$mid-blue: #364560;
+$light-blue: #3f5071;
+$sky-blue: #87ceeb;
+$dark-green: #005b41;
+$teal: #008170;
+$light-teal: #00b69e;
+
+// global css classes
+.text-center {
+	text-align: center;
+}
+
+.text-bold {
+	font-weight: bold;
+}
+
+.text-left {
+	text-align: left;
+}
+
+.img-cover {
+	object-fit: cover;
+}
+
+.full-height {
+	height: 100%;
+}
+
+.full-width {
+	width: 100%;
+}
+
+.flex {
+	display: flex;
+}
+
+.flex-column {
+	display: flex;
+	flex-direction: column;
+}
+
+.display-block {
+	display: block;
+}
+
+.flex-wrap {
+	flex-wrap: wrap;
+}

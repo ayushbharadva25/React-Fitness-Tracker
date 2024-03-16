@@ -1,0 +1,163 @@
+// Theme variables:
+$dark-blue: #232d3f;
+$light-blue: #3f5071;
+$dark-green: #005b41;
+$teal: #008170;
+$mid-teal: #00b69e;
+$light-teal: #64ccc5;
+
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: $dark-blue;
+	color: white;
+	flex-wrap: wrap;
+	padding: 0.5rem 1rem;
+	margin: 0 auto;
+	width: 100%;
+
+	.burger-btn {
+		display: none;
+		background-color: transparent;
+		border: none;
+		cursor: pointer;
+	}
+	.close-burger-btn {
+		display: none;
+		cursor: pointer;
+	}
+	.profile-menu {
+		display: block;
+	}
+	.profile-menu:hover {
+		cursor: pointer;
+	}
+
+	.logo {
+		font-size: 2rem;
+		cursor: pointer;
+		margin: 0.5rem;
+		.logo-text {
+			text-align: left;
+			color: white;
+			text-decoration: none;
+		}
+	}
+
+	.nav-items {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 7px;
+		.mobile-logout-btn {
+			display: none;
+		}
+	}
+
+	.nav-item {
+		list-style-type: none;
+		cursor: pointer;
+	}
+
+	.link {
+		color: white;
+		padding: 0.3rem 0.6rem;
+		text-decoration: none;
+		transition: all 0.2s ease;
+		font-weight: bold;
+	}
+	.link:hover {
+		color: $light-teal;
+		text-decoration: underline;
+	}
+	.active {
+		color: $light-teal;
+		font-weight: bold;
+	}
+}
+
+.login {
+	all: unset;
+	padding: 0.5rem 1rem;
+	font-weight: bold;
+	background-color: $teal;
+	border-radius: 7px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+.login:hover {
+	background-color: #029f8a;
+}
+
+.mobile-logout-btn {
+	padding: 0.3rem 0.6rem;
+	background: transparent;
+	color: white;
+	border: none;
+	outline: none;
+	font-size: 1rem;
+	font-weight: bold;
+	border-radius: 5px;
+}
+.mobile-logout-btn:hover {
+	text-decoration: underline;
+	background-color: lightgray;
+	color: $dark-blue;
+}
+
+@media screen and (max-width: 768px) {
+	.navbar {
+		.burger-btn {
+			display: block;
+			font-size: 1.5rem;
+		}
+		.close-burger-btn {
+			display: block;
+			font-size: 1.5rem;
+		}
+		.profile-menu {
+			display: none;
+		}
+		.display-none {
+			display: none;
+		}
+		.nav-items {
+			position: absolute;
+			flex-direction: column;
+			justify-content: center;
+			height: calc(100vh - 110px);
+			top: 68px;
+			background-color: rgba($light-blue, $alpha: 1);
+			color: #fff;
+			left: 0;
+			width: 100vw;
+			gap: 1rem;
+			z-index: 100;
+			padding: 0.5rem;
+
+			.mobile-logout-btn {
+				display: block;
+				font-weight: bold;
+				cursor: pointer;
+			}
+			.nav-item {
+				width: 100%;
+				text-align: center;
+				.link {
+					display: inline-block;
+					width: 100%;
+					padding: 10px 0;
+				}
+				.link:hover {
+					color: white;
+					text-decoration: underline;
+				}
+			}
+			.nav-item:hover {
+				background-color: rgba($color: $mid-teal, $alpha: 0.5);
+			}
+		}
+	}
+}

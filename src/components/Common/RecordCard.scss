@@ -1,0 +1,139 @@
+$black: #0f0f0f;
+$mid-blue: #364560;
+$light-blue: #d4e4ff;
+$mid-teal: #0a8070;
+$red: #cc274c;
+
+.record-card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 1.5rem;
+	padding: 1rem;
+	flex-wrap: wrap;
+	width: 100%;
+
+	.exercise-record-container,
+	.meal-record-container {
+		align-self: flex-start;
+		flex: 1 0 45%;
+		max-width: 620px;
+
+		.record-container {
+			padding: 1rem;
+			border-radius: 30px;
+			display: flex;
+			margin: 1rem 0;
+			transition: all 0.2s ease;
+
+			.exercise-record-card,
+			.meal-record-card {
+				width: 100%;
+				padding: 1rem 0 0.75rem 1rem;
+
+				.exercise-record-title {
+					font-weight: bold;
+					font-size: 2rem;
+					margin-bottom: 1.5rem;
+					color: $light-blue;
+					text-align: left;
+				}
+
+				.record-info {
+					margin-top: 2.5rem;
+					display: flex;
+					justify-content: space-evenly;
+					gap: 1.5rem;
+
+					p {
+						background-color: rgba($color: #fff, $alpha: 0.5);
+						padding: 0.5rem 1rem;
+						border-radius: 40px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						gap: 10px;
+						img {
+							height: 20px;
+							width: 20px;
+							object-fit: cover;
+						}
+					}
+				}
+			}
+		}
+
+		.record-container:hover {
+			box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+		}
+	}
+
+	.delete-record {
+		background-color: #fff;
+		border-radius: 25%;
+		padding: 0.25rem;
+		font-size: 2rem;
+		color: $red;
+		cursor: pointer;
+	}
+}
+
+.exercise-card-bg {
+	background: linear-gradient(
+		to right,
+		rgba(50, 123, 207, 1) 0%,
+		rgb(165, 186, 211) 100%
+	);
+}
+
+.meal-card-bg {
+	background: linear-gradient(
+		to right,
+		rgba(64, 226, 184, 1) 0%,
+		rgba(178, 223, 212, 1) 100%
+	);
+}
+
+.meal-record-title {
+	font-weight: bold;
+	font-size: 2rem;
+	margin-bottom: 1.5rem;
+	color: $mid-teal;
+	text-align: left;
+}
+
+.clock-icon {
+	color: $mid-teal;
+	font-size: 20px;
+}
+
+.dg-activity-info,
+.dg-activity-heading {
+	color: #3f5071;
+	font-size: 2rem;
+	text-decoration: underline;
+	text-shadow: 1px 1px 3px #4242af;
+}
+
+.no-activity-heading {
+	color: #3f7154;
+	font-size: 2rem;
+	text-decoration: underline;
+	text-shadow: 1px 1px 3px #217c5e;
+}
+
+@media screen and (max-width: 480px) {
+	.record-card {
+		.exercise-record-container,
+		.meal-record-container {
+			flex: 1 0 100%;
+			.record-container {
+				padding: 0.75rem;
+				.exercise-record-card,
+				.meal-record-card {
+					padding: 1rem 0.5rem;
+				}
+			}
+		}
+	}
+}
